@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Web Site</title>
+  </head>
+  <body style="background-color: #202020">
+    <span hidden>x</span>
+    <div
+      class="container"
+      style="
+        display: flex;
+        height: 90vh;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        position: fixed;
+      "
+    >
+      <div
+        class="content-container"
+        style="
+          display: block;
+          width: 50%;
+          background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+          border-radius: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 10px;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 18px;
+        "
+      >
+        <h1 style="color: white; margin-left: 15px">String Convertion</h1>
+        <label
+          style="
+            display: block;
+            margin-left: 15px;
+            margin-top: 0;
+            width: 85%;
+            position: relative;
+            padding-right: 60px;
+            padding-left: 5px;
+            padding-bottom: 5px;
+            border-radius: 6.7px;
+            color: white;
+            height: fit-content !important;
+          "
+        >
+          <span> Input String </span>
+          <br />
+          <textarea
+            required
+            aria-required="true"
+            style="
+              width: 100%;
+              border-radius: 6.7px;
+              padding-left: 5px;
+              padding-right: 5px;
+              resize: vertical;
+            "
+            name="text-conv"
+            id="text-conv"
+            placeholder="Input String"
+          ></textarea>
+        </label>
+        <br />
+        <label
+          style="
+            display: block;
+            margin-left: 15px;
+            margin-top: 0;
+            width: 85%;
+            position: relative;
+            padding-right: 60px;
+            padding-left: 5px;
+            padding-bottom: 5px;
+            border-radius: 6.7px;
+            color: white;
+          "
+        >
+          <span> Binnary Code </span>
+          <br />
+          <textarea
+            readonly
+            style="
+              width: 100%;
+              border-radius: 6.7px;
+              padding-left: 5px;
+              padding-right: 5px;
+              resize: vertical;
+            "
+            name="result"
+            id="result"
+            placeholder="Binnary Convertion"
+          ></textarea>
+        </label>
+        <br />
+        <label
+          style="
+            display: block;
+            margin-left: 15px;
+            margin-top: 0;
+            width: 85%;
+            position: relative;
+            padding-right: 60px;
+            padding-left: 5px;
+            padding-bottom: 5px;
+            border-radius: 6.7px;
+            color: white;
+          "
+        >
+          <span> Hex Code </span>
+          <br />
+          <textarea
+            readonly
+            style="
+              width: 100%;
+              border-radius: 6.7px;
+              padding-left: 5px;
+              padding-right: 5px;
+              resize: vertical;
+            "
+            name="hex"
+            id="hex"
+            placeholder="Hex Convertion"
+          ></textarea>
+        </label>
+        <div
+          class="button-container"
+          style="
+            margin-left: 15px;
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            margin-bottom: 10px;
+          "
+        >
+          <a
+            href="aboutme.html"
+            class="about"
+            style="
+              margin-right: 20px;
+              width: 30%;
+              border-radius: 10px;
+              border: 5px solid white;
+              color: white;
+              cursor: pointer;
+              text-decoration: none;
+              background-color: transparent;
+              display: flex;
+              justify-content: space-between;
+              font-size: 25px;
+              padding-left: 20px;
+              padding-right: 20px;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              style="fill: rgb(255, 255, 255); width: 30%"
+            >
+              <path
+                d="M12 22c3.719 0 7.063-2.035 8.809-5.314L13 12l7.809-4.686C19.063 4.035 15.719 2 12 2 6.486 2 2 6.486 2 12s4.486 10 10 10zm-.5-16a1.5 1.5 0 1 1-.001 3.001A1.5 1.5 0 0 1 11.5 6z"
+              ></path>
+            </svg>
+            <span style="text-align: center; width: 70%; margin-top: 25px">
+              About Me
+            </span>
+          </a>
+          <div
+            class="subcontainer"
+            style="display: block; width: 30%; margin-right: 50px"
+          >
+            <button
+              onclick="convert()"
+              class="convert"
+              style="
+                font-size: 20px;
+                width: 100%;
+                float: right;
+                background-color: transparent;
+                box-shadow: none;
+                border: 2px solid white;
+                border-radius: 6px;
+                color: white;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                style="fill: rgb(255, 255, 255); width: 20%; margin-left: 5px"
+              >
+                <path d="M4 6h2v12H4zm10 7h6v-2h-6V6l-6 6 6 6z"></path>
+              </svg>
+              <span style="width: 80%; margin-top: 5px"> Convert </span>
+            </button>
+            <br />
+            <button
+              type="reset"
+              onclick="reset()"
+              class="reset"
+              style="
+                font-size: 20px;
+                width: 100%;
+                float: right;
+                margin-top: 10px;
+                box-shadow: none;
+                border: 2px solid white;
+                background-color: transparent;
+                border-radius: 6px;
+                color: white;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                style="fill: rgba(255, 255, 255, 1); width: 20%"
+              >
+                <path
+                  d="M10 11H7.101l.001-.009a4.956 4.956 0 0 1 .752-1.787 5.054 5.054 0 0 1 2.2-1.811c.302-.128.617-.226.938-.291a5.078 5.078 0 0 1 2.018 0 4.978 4.978 0 0 1 2.525 1.361l1.416-1.412a7.036 7.036 0 0 0-2.224-1.501 6.921 6.921 0 0 0-1.315-.408 7.079 7.079 0 0 0-2.819 0 6.94 6.94 0 0 0-1.316.409 7.04 7.04 0 0 0-3.08 2.534 6.978 6.978 0 0 0-1.054 2.505c-.028.135-.043.273-.063.41H2l4 4 4-4zm4 2h2.899l-.001.008a4.976 4.976 0 0 1-2.103 3.138 4.943 4.943 0 0 1-1.787.752 5.073 5.073 0 0 1-2.017 0 4.956 4.956 0 0 1-1.787-.752 5.072 5.072 0 0 1-.74-.61L7.05 16.95a7.032 7.032 0 0 0 2.225 1.5c.424.18.867.317 1.315.408a7.07 7.07 0 0 0 2.818 0 7.031 7.031 0 0 0 4.395-2.945 6.974 6.974 0 0 0 1.053-2.503c.027-.135.043-.273.063-.41H22l-4-4-4 4z"
+                ></path>
+              </svg>
+              <span
+                style="
+                  width: 80%;
+                  height: 100%;
+                  text-align: center;
+                  margin-top: 5px;
+                "
+              >
+                Reset
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    textarea {
+      font-size: 12.5px;
+    }
+    .about:hover {
+      background-color: rgb(195, 0, 136) !important;
+      transition: all ease-in 500ms !important;
+    }
+    .about:focus-within {
+      background-color: rgb(195, 0, 136) !important;
+      transition: all ease-in 500ms !important;
+    }
+    .convert:hover {
+      background-color: rgb(0, 167, 53) !important;
+      transition: all ease-in 500ms !important;
+    }
+    .reset:hover {
+      background-color: rgb(207, 186, 48) !important;
+      transition: all ease-in 500ms !important;
+    }
+  </style>
+  <script>
+    function convert() {
+      var output = document.getElementById("result");
+      var input = document.getElementById("text-conv").value;
+      output.value = "";
+      for (var i = 0; i < input.length; i++) {
+        output.value += input[i].charCodeAt(0).toString(2) + " ";
+      }
+
+      stringToHex(input);
+    }
+
+    function reset() {
+      document.getElementById("result").value = "";
+      document.getElementById("text-conv").value = "";
+      document.getElementById("hex").value = "";
+    }
+    const stringToHex = (str) => {
+      var output = document.getElementById("hex");
+      var unicode = document.getElementById("unicode");
+
+      let hex = "#";
+      for (let i = 0; i < str.length; i++) {
+        const charCode = str.charCodeAt(i);
+        const hexValue = charCode.toString(16);
+
+        // Pad with zeros to ensure two-digit representation
+        hex += hexValue.padStart(2, "0");
+      }
+
+      output.value = hex;
+    };
+  </script>
+</html>

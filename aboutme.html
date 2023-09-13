@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+  </head>
+  <body style="background-color: #202020">
+    <div
+      style="
+        display: flex;
+        align-content: center;
+        width: 100%;
+        height: 90vh;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      "
+    >
+      <div class="card">
+        <svg class="self-pict"></svg>
+        <div class="card__content">
+          <p class="card__title">Ahmad Aria Adi Saputra</p>
+          <p class="card__title" style="font-size: 20px; color: #777">
+            2241720247
+          </p>
+          <p class="card__description">
+            Seorang Mahasiswa dari kelas TI-2H dengan nomor presensi 02 yang
+            suka berpetualang di dunia programming yang saat ini sedang berusaha
+            untuk cosplay menjadi manusia gua untuk mendapatkan ketenangan agar
+            tidak melihat potongan kode dari teman kelas yang minta bantuan dan
+            cuma di beri beberapa baris kode variable dengan nama yang tidak
+            jelas seperti <strong>Kim Jong Un</strong> ataupun
+            <strong>Xi Jinping</strong>
+            dan karena hal itu dirinya telah muak dan merasa bahwa apa yang
+            telah ia jelaskan kepada teman-temanyna mengenai tata cara menulis
+            kode program yang baik dan benar telah di sia-siakan.
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <span style="font-size: 10px">
+              BTW ini cardnya saya ngambil template dari internet pak, hehe.
+              😁</span
+            >
+            <a
+              href="./home.html"
+              style="
+                float: right;
+                font-size: 20px;
+                width: fit-content;
+                max-width: 20%;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+                float: right;
+                background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+                box-shadow: none;
+                border: 2px solid transparent;
+                border-radius: 6px;
+                color: white;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                style="fill: rgba(255, 255, 255, 1); width: 20%"
+              >
+                <path
+                  d="m4.431 12.822 13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z"
+                ></path>
+              </svg>
+              <span style="width: 80%; margin-top: 5px">Kembali</span></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    .card {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .card .self-pict {
+      width: 150px;
+      height: 150px;
+      background-image: url("./assets/self.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      fill: #333;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      border: 4px solid white;
+      border-radius: 50%;
+    }
+
+    .card:hover {
+      transform: rotate(-5deg) scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #fff;
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .card:hover .card__content {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 1;
+    }
+
+    .card__title {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .card__description {
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: #777;
+      line-height: 1.4;
+    }
+
+    .card:hover .self-pict {
+      scale: 0;
+      transform: rotate(-45deg);
+    }
+  </style>
+</html>
